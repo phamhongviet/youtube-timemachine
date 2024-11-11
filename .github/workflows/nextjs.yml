@@ -58,6 +58,9 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+      - name: Install PNPM globally
+        if: ${{ steps.detect-package-manager.outputs.manager == 'pnpm' }}
+        run: npm install -g pnpm
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         if: ${{ steps.detect-package-manager.outputs.manager == 'pnpm' }}
