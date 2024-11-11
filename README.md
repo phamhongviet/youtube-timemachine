@@ -14,3 +14,21 @@ This project allows you to create a YouTube-like static website from a list of Y
 - Support for playlists and channel sections
 - Responsive design matching YouTube's layout
 - No server-side components needed - deploy anywhere
+
+## Getting Started
+
+1. Edit `public/videos.txt` and add your YouTube video URLs (one per line)
+
+2. Install prerequisites:
+   - [Node.js](https://nodejs.org/)
+   - [pnpm](https://pnpm.io/) package manager
+
+3. Build the static site:
+   ```bash
+   npm run export
+   ```
+
+4. Start a local dev server to preview:
+   ```bash
+   npx serve out
+   ```
