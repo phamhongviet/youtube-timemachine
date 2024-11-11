@@ -6,7 +6,7 @@ export default function Home() {
   const [videoUrls, setVideoUrls] = useState<string[]>([]);
 
   useEffect(() => {
-    fetch('/videos.txt')
+    fetch('./videos.txt')
       .then(res => res.text())
       .then(data => {
         const urls = data.split('\n').filter(Boolean);
